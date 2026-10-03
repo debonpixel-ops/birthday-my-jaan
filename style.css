@@ -1,0 +1,308 @@
+/* General Reset & Background Theme */
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #ff758c 0%, #ff7eb3 100%);
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    overflow-x: hidden;
+    text-align: center;
+}
+
+/* Floating Ambient Background Animation */
+.floating-ambient {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.floating-ambient span {
+    position: absolute;
+    display: block;
+    font-size: 20px;
+    animation: floatUp 10s linear infinite;
+    bottom: -50px;
+    opacity: 0.3;
+}
+
+.floating-ambient span:nth-child(1) { left: 10%; animation-duration: 8s; }
+.floating-ambient span:nth-child(2) { left: 30%; animation-duration: 12s; }
+.floating-ambient span:nth-child(3) { left: 50%; animation-duration: 9s; }
+.floating-ambient span:nth-child(4) { left: 70%; animation-duration: 11s; }
+.floating-ambient span:nth-child(5) { left: 85%; animation-duration: 7s; }
+.floating-ambient span:nth-child(6) { left: 20%; animation-duration: 13s; }
+
+@keyframes floatUp {
+    0% { transform: translateY(0) rotate(0deg); opacity: 0.3; }
+    100% { transform: translateY(-105vh) rotate(360deg); opacity: 0; }
+}
+
+/* Glassmorphism Cards */
+.glass-card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    padding: 30px 20px;
+    margin: 20px auto;
+    max-width: 500px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Landing Screen Passcode */
+#landing-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg, #1f1c2c, #928dab);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease;
+}
+
+#landing-screen.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#passcode-input {
+    padding: 12px;
+    width: 85%;
+    border-radius: 20px;
+    border: none;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+}
+
+#gift-input {
+    padding: 10px;
+    width: 85%;
+    border-radius: 10px;
+    border: none;
+    margin-top: 10px;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+}
+
+/* Buttons */
+#enter-btn, #start-countdown-btn, .vibe-btn {
+    background: #ff4d6d;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(255, 77, 109, 0.4);
+    transition: all 0.3s ease;
+}
+
+#enter-btn:hover, #start-countdown-btn:hover, .vibe-btn:hover {
+    background: #ff1e42;
+    transform: translateY(-2px);
+}
+
+/* Music Toggle Floating Button */
+#music-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.3);
+    border: 1px solid #fff;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    backdrop-filter: blur(5px);
+}
+
+/* Sections & Timeline */
+.section {
+    padding: 40px 15px;
+    z-index: 1;
+    position: relative;
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 20px 0;
+}
+
+.media-frame {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 15px;
+    border: 4px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.media-frame:hover {
+    transform: scale(1.02);
+}
+
+.caption {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1em;
+    margin-top: 12px;
+    padding: 0 20px;
+}
+
+.highlight {
+    font-weight: bold;
+    color: #fff176;
+    font-size: 1.2em;
+}
+
+/* Vibe Buttons Grid */
+.vibe-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.vibe-box {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    border: 1px dashed rgba(255, 255, 255, 0.3);
+}
+
+.balloon-item {
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+.balloon-item:hover {
+    transform: scale(1.2);
+}
+
+/* Letter Envelope Styling */
+.envelope {
+    position: relative;
+    width: 280px;
+    height: 180px;
+    background: #e63946;
+    margin: 30px auto;
+    border-radius: 0 0 10px 10px;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.envelope .flap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 140px solid transparent;
+    border-right: 140px solid transparent;
+    border-top: 100px solid #d90429;
+    transform-origin: top;
+    transition: transform 0.4s ease;
+    z-index: 3;
+}
+
+.envelope.open .flap {
+    transform: rotateX(180deg);
+    z-index: 1;
+}
+
+.envelope .letter-paper {
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
+    width: 250px;
+    height: 140px;
+    background: #fff;
+    color: #333;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    transition: transform 0.4s ease;
+    z-index: 2;
+    text-align: left;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.envelope.open .letter-paper {
+    transform: translateY(-80px);
+    z-index: 4;
+}
+
+.front-text {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    z-index: 3;
+    font-weight: 500;
+}
+
+.handwritten {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    line-height: 1.4;
+}
+
+/* Animations & Utility */
+.fade-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hidden {
+    display: none !important;
+}
+
+.happy-birthday-text {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #ffccd5;
+}
+
+.name-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    margin-top: 10px;
+}

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Sadhu Bachhu Bby Jaan ❤️️</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+
+    <!-- Floating Background Hearts & Teddies Ambient Effect -->
+    <div class="floating-ambient">
+        <span>❤️</span><span>🧸</span><span>💖</span><span>✨</span><span>🧸</span><span>❤</span>
+    </div>
+
+    <audio id="bg-music" loop>
+        <source src="assets/music/background-music.mp3" type="audio/mpeg">
+    </audio>
+    <button id="music-toggle" class="hidden">🎵</button>
+
+    <!-- Landing Screen with Anniversary Date Passcode -->
+    <div id="landing-screen">
+        <div class="stars"></div>
+        <div class="landing-content glass-card text-center" style="max-width: 350px;">
+            <p style="font-size: 1.2rem;">🧸 Welcome, My Love!</p>
+            <p style="font-size: 0.9em; margin-bottom: 15px;">Enter our special anniversary date to unlock ❤️</p>
+            <input type="text" id="passcode-input" placeholder="Type date here..." autocomplete="off">
+            <br>
+            <button id="enter-btn">✨ UNLOCK OUR STORY ✨</button>
+            <p id="error-msg" style="color: #ffb3c1; font-size: 0.85em; margin-top: 10px; display: none;">Arre galat date hai! Yaad nahi kya? 😤</p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main id="main-content" class="hidden">
+        
+        <!-- Birthday Intro -->
+        <header id="birthday-intro" class="section">
+            <div class="glass-card text-center">
+                <h1>Happy Birthday,</h1>
+                <h2>Sadhu Bachhu Bby Jaan ❤️🎂</h2>
+                <p style="margin-top: 10px; font-size: 1.1em;">🧸 Meri duniya, meri sab kuch!</p>
+            </div>
+        </header>
+
+        <!-- Supportive & Caring Notes Section -->
+        <section id="supportive-notes" class="section fade-on-scroll">
+            <div class="glass-card text-left">
+                <h3>A Quick Note For You, Meri Jaan... 🥺❤️</h3>
+                <p>Pata hai? Jab bhi main pareshan hota hu ya life thodi heavy lagti hai, tumhara ek message ya ek call sab theek kar deta hai. Thank you mujhe hamesha sambhalne ke liye, meri har choti-badi baat sunne ke liye, aur bina kahe mera khayal rakhne ke liye. 🫂✨</p>
+                <p>Tum sirf meri girlfriend nahi ho... tum mera sukoon ho, mera ghar ho. Aur chahe kuch bhi ho jaye, ye Advi Boy hamesha tumhare sath hai, har kadam par. Kahi nahi jaane dunga! 🤝❤️</p>
+            </div>
+        </section>
+
+        <!-- Memory Intro -->
+        <section id="memory-intro" class="section fade-on-scroll">
+            <div class="glass-card text-left">
+                <p>Humne shayad photos kam li hain…<br>par hamari memories kisi aur ki bahut saari photos se zyada hain. ❤️</p>
+                <p>Har moment camera mein capture nahi hua,<br>kuch moments bas aankhon mein reh gaye,<br>kuch baaton mein,<br>kuch chhat se hui conversations mein,<br>aur kuch sirf hum dono ke beech. 🫂</p>
+                <p class="highlight">Advi Boy + Advi Girl 😂❤️</p>
+                <p>Same name, same madness,<br>aur pata nahi kaise itni saari khoobsurat memories.</p>
+            </div>
+        </section>
+
+        <!-- TIMELINE OF MEMORIES -->
+        <div class="timeline">
+            <section class="timeline-item fade-on-scroll">
+                <img src="assets/images/starting-period.jpeg" alt="Starting Period" class="media-frame">
+                <p class="caption">Babe remember the starting period of our relationship? 🥺<br>Woh naya naya ehsaas aur hamari saari baatein...</p>
+            </section>
+
+            <section class="timeline-item fade-on-scroll">
+                <img src="assets/images/uff-that-love-you.jpeg" alt="Uff that love you" class="media-frame">
+                <p class="caption">Uff that love you... ❤️<br>Shayad yahin se sab kuch thoda aur special hone laga tha.</p>
+            </section>
+
+            <section class="timeline-item fade-on-scroll">
+                <img src="assets/images/first-valentines.jpeg" alt="First Valentines" class="media-frame">
+                <p class="caption">Our first Valentine's week online.<br>Door rehkar bhi sabse kareeb. 🌹</p>
+            </section>
+            
+            <section class="timeline-item fade-on-scroll">
+                <img src="assets/images/chhat-memories.jpeg" alt="Chhat Memories" class="media-frame">
+                <p class="caption">Chhat par ki memories... 🌙<br>Tum wahan se, main yahan se, aur beech mein hamari duniya.</p>
+            </section>
+
+            <section class="timeline-item fade-on-scroll">
+                <img src="assets/images/old-video-calls-1.jpeg" alt="Old Video Calls" class="media-frame">
+                <p class="caption">Old video calls bbe... ❤️<br>Screen ke uss side tum bilkul paas lagti thi.</p>
+            </section>
+
+            <section class="timeline-item fade-on-scroll">
+                <img src="assets/images/our-first-selfie.jpeg" alt="Our First Selfie" class="media-frame">
+                <p class="caption">Our first selfie! 📸<br>Ek frame mein do paagal. 😂❤️</p>
+            </section>
+
+            <section class="timeline-item fade-on-scroll">
+                <img src="assets/images/glossing-diwali.jpeg" alt="Glossing Diwali" class="media-frame glow">
+                <p class="caption">Glossing Diwali ✨<br>Lights se zyada tumhari smile chamak rahi thi.</p>
+            </section>
+
+            <section class="timeline-item fade-on-scroll">
+                <img src="assets/images/holi-together.jpeg" alt="Holi Together" class="media-frame">
+                <p class="caption">Holi together 🎨<br>Zindagi mein sabse khoobsurat rang tumhare aane se bhare hain. ❤️</p>
+            </section>
+
+            <section class="timeline-item fade-on-scroll">
+                <img src="assets/images/hand-in-hand.jpeg" alt="Hand in Hand" class="media-frame">
+                <p class="caption">Hand in hand for a lifetime.<br>Kahi nahi jaane dunga. 🤝❤️</p>
+            </section>
+
+            <section class="timeline-item fade-on-scroll">
+                <img src="assets/images/first-anniversary.jpeg" alt="First Anniversary" class="media-frame">
+                <p class="caption">Memories of our first anniversary. 🎉<br>Ek saal ka safar, aur poori zindagi baaki hai. ❤️</p>
+            </section>
+
+            <!-- ADVI ID EASTER EGG -->
+            <section class="timeline-item fade-on-scroll easter-egg">
+                <p>Wait…<br>remember the same IDs babe? 👀</p>
+                <img src="assets/images/advi-ids.jpeg" alt="Advi IDs" class="media-frame my-4 hidden" id="advi-reveal">
+                <p class="hidden" id="advi-text">Advi Boy + Advi Girl 😂❤️<br>Same name, same madness.</p>
+                <button id="reveal-advi-btn">Reveal Magic</button>
+            </section>
+        </div>
+
+        <!-- WHAT IF I MEET YOU SECTION -->
+        <section id="meet-section" class="section fade-on-scroll">
+            <div class="glass-card text-center">
+                <h2>Agar hum abhi milte, toh tum pehle kya karti? 👀 🧸</h2>
+                <div class="vibe-buttons" style="margin-top: 15px;">
+                    <button class="vibe-btn" onclick="selectMeet('hug')">🫂 Ek tight wala hug</button>
+                    <button class="vibe-btn" onclick="selectMeet('food')">🍕 Kuch khane chalengi</button>
+                    <button class="vibe-btn" onclick="selectMeet('cry')">😭 Khushi ke maare ro padin gi</button>
+                    <button class="vibe-btn" onclick="selectMeet('stare')">🥰 Bas dekhti rahengi</button>
+                </div>
+                <p id="meet-response" class="hidden" style="margin-top: 20px; font-style: italic; color: #ffccd5; font-size: 1.05em;"></p>
+            </div>
+        </section>
+
+        <!-- BALLOON BLAST & GIFT WISHLIST -->
+        <section id="balloon-section" class="section fade-on-scroll">
+            <div class="glass-card text-center">
+                <h2>🎈 Balloon Blast & Gift Wishlist! 🎁</h2>
+                <p style="font-size: 0.9em; margin-bottom: 15px;">Pop a balloon below to unlock your special gift option! 👇</p>
+                
+                <div class="balloon-container" style="display: flex; justify-content: center; gap: 20px; font-size: 2.5rem; cursor: pointer;">
+                    <span onclick="popBalloon(this)" class="balloon-item">🎈</span>
+                    <span onclick="popBalloon(this)" class="balloon-item">🎈</span>
+                    <span onclick="popBalloon(this)" class="balloon-item">🎈</span>
+                </div>
+
+                <div id="gift-box" class="hidden" style="margin-top: 20px; animation: fadeIn 0.5s ease;">
+                    <p style="font-weight: 500; color: #fff;">🧸 Type the exact gift you want from me right now:</p>
+                    <input type="text" id="gift-input" placeholder="e.g., Chocolate, Teddy, Dress, Date..." autocomplete="off">
+                </div>
+            </div>
+        </section>
+
+        <!-- ONLINE CAKE CUTTING -->
+        <section id="cake-section" class="section fade-on-scroll">
+            <div class="glass-card text-center">
+                <h2>🎂 Online Cake Cutting Ceremony!</h2>
+                <p style="font-size: 0.9em;">Candles are glowing for you, my queen. Cut the cake! ✨</p>
+                <div id="cake-visual" style="font-size: 4rem; margin: 20px 0;">🎂 🕯️🕯️🕯️</div>
+                <button class="vibe-btn" id="cut-cake-btn" onclick="cutCake()">Cut the Cake 🍰</button>
+            </div>
+        </section>
+
+        <!-- CHOOSE YOUR VIBE / COUPON SECTION -->
+        <section id="vibe-section" class="section fade-on-scroll">
+            <div class="glass-card text-center">
+                <h2>Choose Your Vibe, My Love 💕</h2>
+                <div class="vibe-buttons">
+                    <button class="vibe-btn" onclick="showVibe('hug')">🫂 Hug Me</button>
+                    <button class="vibe-btn" onclick="showVibe('kiss')">😘 Kiss Me</button>
+                    <button class="vibe-btn" onclick="showVibe('forehead')">🥰 Forehead Kiss</button>
+                    <button class="vibe-btn" onclick="showVibe('food')">🍕 Treat Time</button>
+                </div>
+                <div id="vibe-display" class="vibe-box hidden">
+                    <p id="vibe-text">Select something above! ❤️</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- LETTER SECTION -->
+        <section id="letter-section" class="section fade-on-scroll">
+            <div class="envelope" id="envelope">
+                <div class="flap"></div>
+                <div class="pocket"></div>
+                <div class="letter-paper">
+                    <p class="handwritten">
+                        My dearest Sadhu Bachhu Bby Jaan,<br><br>
+                        Words could never fully capture what you mean to me, but I wanted to make this space just for us. Thank you for every smile, every fight we made up after, and every quiet moment...
+                        <br><br>Forever yours,<br>Advi Boy
+                    </p>
+                </div>
+                <p class="front-text">A letter for you…<br><span style="font-size: 0.7em;">(Tap to open)</span></p>
+            </div>
+        </section>
+
+        <!-- FINAL BIRTHDAY SURPRISE -->
+        <section id="final-surprise" class="section fade-on-scroll">
+            <div id="countdown-trigger">
+                <p>Wait…<br>one last thing. ❤️</p>
+                <button id="start-countdown-btn">Tap Here</button>
+            </div>
+            <div id="countdown-display" class="hidden">
+                <h1 id="count-number">3</h1>
+            </div>
+            <div id="final-reveal" class="hidden text-center">
+                <h1 class="happy-birthday-text">HAPPY BIRTHDAY</h1>
+                <h2 class="name-text">SADHU BACHHU BBY JAAN ❤️🎂</h2>
+                <img src="assets/images/final-memory.jpeg" alt="Best Memory" class="media-frame glow my-4">
+                <p class="final-message mt-4">Photos kam hain…<br>story bahut badi hai. ❤️<br><br>And this is only a small part of our story.<br><br>Happy Birthday, meri jaan. ❤️</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Fullscreen Modal -->
+    <div id="fullscreen-modal" class="hidden" onclick="closeFullscreen()">
+        <span class="close-modal">&times;</span>
+        <img id="modal-img" class="hidden">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
